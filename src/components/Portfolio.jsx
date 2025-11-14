@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, GitHub, Linkedin, Menu, X, Sun, Moon, Code, Briefcase, User, Send } from 'lucide-react';
+import { Mail, Github, Linkedin, Menu, X, Sun, Moon, Code, Briefcase, User, Send } from 'lucide-react';
 
 export default function Portfolio() {
   const [theme, setTheme] = useState('dark');
@@ -200,7 +200,7 @@ export default function Portfolio() {
 
           <div className="flex justify-center space-x-6 mt-12">
             <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
-              <GitHub size={28} />
+              <Github size={28} />
             </a>
             <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
               <Linkedin size={28} />
