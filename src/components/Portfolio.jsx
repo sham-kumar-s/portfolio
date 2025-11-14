@@ -174,11 +174,11 @@ export default function Portfolio() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
               Hi, I'm <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Your Name
+                Sham Kumar
               </span>
             </h1>
             <p className={`text-xl md:text-2xl mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Full Stack Developer | Creative Problem Solver
+              Full Stack Developer | Machine Learning Engineer | Version Control Enthusiast
             </p>
             <div className="flex justify-center space-x-4">
               <button 
@@ -199,13 +199,13 @@ export default function Portfolio() {
           </div>
 
           <div className="flex justify-center space-x-6 mt-12">
-            <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
+            <a href="https://github.com/sham-kumar-s" target="_blank" className="hover:text-blue-500 transition transform hover:scale-110">
               <Github size={28} />
             </a>
-            <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
+            <a href="https://www.linkedin.com/in/sham-kumar-s" target="_blank" className="hover:text-blue-500 transition transform hover:scale-110">
               <Linkedin size={28} />
             </a>
-            <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
+            <a href="mailto:shamuvel2002@gmail.com" className="hover:text-blue-500 transition transform hover:scale-110">
               <Mail size={28} />
             </a>
           </div>
