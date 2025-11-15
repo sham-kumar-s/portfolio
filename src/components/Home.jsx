@@ -24,7 +24,7 @@ export default function Home({ theme, scrollToSection }) {
             </span>
           </h1>
           <p className={`text-xl md:text-2xl mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-            Full Stack Developer | Machine Learning Engineer | Version Control Enthusiast
+            Full Stack Developer | Version Control Enthusiast
           </p>
           <div className="flex justify-center space-x-4">
             <button 
