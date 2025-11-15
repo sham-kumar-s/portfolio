@@ -16,7 +16,7 @@ export default function Home({ theme, scrollToSection }) {
           <div className={`w-32 h-32 mx-auto rounded-full mb-6 ${
             isDark ? 'bg-gradient-to-r from-blue-500 to-purple-600' : 'bg-gradient-to-r from-blue-400 to-purple-500'
           } flex items-center justify-center text-5xl`}>
-            👨‍💻
+            👨
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
             Hi, I'm <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
