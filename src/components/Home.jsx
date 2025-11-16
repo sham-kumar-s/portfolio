@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github } from 'lucide-react';
+import Linkedin from '../icons/Linkedin';
 
 export default function Home({ theme, scrollToSection }) {
   const isDark = theme === 'dark';
@@ -18,12 +19,16 @@ export default function Home({ theme, scrollToSection }) {
           } flex items-center justify-center text-5xl`}>
             👨
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
+          <h1 className={`text-5xl md:text-7xl font-bold mb-4 animate-slide-up ${
+            isDark ? 'text-gray-50' : 'text-gray-900'
+          }`}>
             Hi, I'm <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Sham Kumar
             </span>
           </h1>
-          <p className={`text-xl md:text-2xl mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+          <p className={`text-xl md:text-2xl mb-8 font-medium ${
+            isDark ? 'text-gray-400' : 'text-gray-700'
+          }`}>
             Full Stack Developer | Version Control Enthusiast
           </p>
           <div className="flex justify-center space-x-4">
@@ -35,8 +40,8 @@ export default function Home({ theme, scrollToSection }) {
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className={`px-8 py-3 rounded-full border-2 ${
-                isDark ? 'border-gray-700 hover:bg-gray-800' : 'border-gray-300 hover:bg-gray-100'
+              className={`px-8 py-3 rounded-full border-2 font-medium ${
+                isDark ? 'border-gray-700 text-gray-300 hover:bg-gray-900 hover:border-gray-600' : 'border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500'
               } transition`}
             >
               View Work
@@ -44,12 +49,14 @@ export default function Home({ theme, scrollToSection }) {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-6 mt-12">
+        <div className={`flex justify-center space-x-6 mt-12 ${
+          isDark ? 'text-gray-400' : 'text-gray-600'
+        }`}>
           <a href="https://github.com/sham-kumar-s" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:scale-110">
             <Github size={28} />
           </a>
           <a href="https://www.linkedin.com/in/sham-kumar-s" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:scale-110">
-            <Linkedin size={28} />
+            <Linkedin width={28} height={28} />
           </a>
           <a href="mailto:shamuvel2002@gmail.com" className="hover:text-blue-500 transition transform hover:scale-110">
             <Mail size={28} />

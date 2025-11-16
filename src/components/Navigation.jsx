@@ -7,13 +7,13 @@ export default function Navigation({ theme, scrolled, activeSection, menuOpen, s
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? isDark ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-white/95 backdrop-blur-sm shadow-lg'
+        ? isDark ? 'bg-gray-950/95 backdrop-blur-sm shadow-lg' : 'bg-gray-50/95 backdrop-blur-sm shadow-lg'
         : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Portfolio
+            sham
           </div>
 
           {/* Desktop Menu */}
@@ -24,8 +24,8 @@ export default function Navigation({ theme, scrolled, activeSection, menuOpen, s
                 onClick={() => scrollToSection(item)}
                 className={`capitalize transition-colors ${
                   activeSection === item
-                    ? 'text-blue-500'
-                    : isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-blue-500 font-semibold'
+                    : isDark ? 'text-gray-400 hover:text-gray-200' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 {item}
@@ -34,7 +34,7 @@ export default function Navigation({ theme, scrolled, activeSection, menuOpen, s
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-full ${
-                isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'
+                isDark ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-200 hover:bg-gray-300'
               }`}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -54,7 +54,7 @@ export default function Navigation({ theme, scrolled, activeSection, menuOpen, s
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className={`md:hidden py-4 ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
+          <div className={`md:hidden py-4 ${isDark ? 'bg-gray-950' : 'bg-gray-50'}`}>
             {['home', 'about', 'technologies', 'projects', 'contact'].map(item => (
               <button
                 key={item}

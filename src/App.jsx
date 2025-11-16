@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
-      isDark ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
+      isDark ? 'bg-gray-950 text-gray-100' : 'bg-gray-50 text-gray-900'
     }`}>
       <Navigation
         theme={theme}
