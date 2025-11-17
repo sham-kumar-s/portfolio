@@ -50,7 +50,7 @@ jobs:
       - name: Pull Vercel Project Settings
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+        run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN --scope="sham-kumar-s"
 
       - name: Build Project with Vercel
         env:
