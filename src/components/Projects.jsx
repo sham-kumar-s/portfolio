@@ -38,7 +38,7 @@ export default function Projects({ theme }) {
           }`}>Projects</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map(project => (
             <div
               key={project.title}
               className={`rounded-lg overflow-hidden ${
