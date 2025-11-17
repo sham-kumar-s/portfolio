@@ -53,6 +53,54 @@ const MongoLogo = () => (
   </svg>
 );
 
+const Marquee = ({ logos, direction = 'forwards', isDark }) => {
+  const numItems = logos.length;
+  const speed = '25s';
+  const itemWidth = '120px';
+  const itemGap = '25px';
+
+  return (
+    <div
+      className="max-w-full overflow-hidden"
+      style={{
+        '--speed': speed,
+        '--numItems': numItems,
+        '--item-width': itemWidth,
+        '--item-gap': itemGap,
+        '--direction': direction,
+        maskImage: 'linear-gradient(to right, transparent, black 2rem, black calc(100% - 2rem), transparent)',
+      }}
+    >
+      <div
+        className="w-max flex"
+        style={{
+          '--track-width': `calc(var(--item-width) * ${numItems})`,
+          '--track-gap': `calc(var(--item-gap) * ${numItems})`,
+        }}
+      >
+        {[...logos, ...logos].map((logo, index) => (
+          <div
+            key={`${logo.id}-${index}`}
+            className={`flex-shrink-0 flex justify-center items-center rounded-2xl ${
+              isDark ? 'bg-gray-800/50 border border-gray-700' : 'bg-white border border-gray-300 shadow-sm'
+            }`}
+            style={{
+              width: 'var(--item-width)',
+              aspectRatio: '1 / 1.2',
+              marginRight: 'var(--item-gap)',
+              animation: `marquee-move var(--speed) linear infinite ${direction}`,
+            }}
+          >
+            <div className="w-3/5 h-auto">
+              {logo.component}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default function Technologies({ theme }) {
   const isDark = theme === 'dark';
 
@@ -91,54 +139,6 @@ export default function Technologies({ theme }) {
     { id: 6, component: <MongoLogo /> },
   ];
 
-  const Marquee = ({ logos, direction = 'forwards' }) => {
-    const numItems = logos.length;
-    const speed = '25s';
-    const itemWidth = '120px';
-    const itemGap = '25px';
-
-    return (
-      <div
-        className="max-w-full overflow-hidden"
-        style={{
-          '--speed': speed,
-          '--numItems': numItems,
-          '--item-width': itemWidth,
-          '--item-gap': itemGap,
-          '--direction': direction,
-          maskImage: 'linear-gradient(to right, transparent, black 2rem, black calc(100% - 2rem), transparent)',
-        }}
-      >
-        <div
-          className="w-max flex"
-          style={{
-            '--track-width': `calc(var(--item-width) * ${numItems})`,
-            '--track-gap': `calc(var(--item-gap) * ${numItems})`,
-          }}
-        >
-          {[...logos, ...logos].map((logo, index) => (
-            <div
-              key={index}
-              className={`flex-shrink-0 flex justify-center items-center rounded-2xl ${
-                isDark ? 'bg-gray-800/50 border border-gray-700' : 'bg-white border border-gray-300 shadow-sm'
-              }`}
-              style={{
-                width: 'var(--item-width)',
-                aspectRatio: '1 / 1.2',
-                marginRight: 'var(--item-gap)',
-                animation: `marquee-move var(--speed) linear infinite ${direction}`,
-              }}
-            >
-              <div className="w-3/5 h-auto">
-                {logo.component}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section id="technologies" className="py-20">
       <div className="max-w-4xl mx-auto px-4">
@@ -150,8 +150,8 @@ export default function Technologies({ theme }) {
         </div>
         <div className="items-center overflow-hidden">
           <div className="w-full flex flex-col gap-y-6">
-            <Marquee logos={logos1} />
-            <Marquee logos={logos2} direction="reverse" />
+            <Marquee logos={logos1} isDark={isDark} />
+            <Marquee logos={logos2} direction="reverse" isDark={isDark} />
           </div>
         </div>
       </div>

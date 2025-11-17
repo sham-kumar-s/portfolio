@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "motion/react";
+import { motion as Motion, useAnimation } from "motion/react";
 
 const staticVariants = {
   normal: {
@@ -64,7 +64,7 @@ const Linkedin = ({
         {...props}
       >
         {/* Static dot and line */}
-        <motion.rect
+        <Motion.rect
           width="4"
           height="12"
           x="2"
@@ -72,7 +72,7 @@ const Linkedin = ({
           variants={staticVariants}
           animate={controls}
         />
-        <motion.circle
+        <Motion.circle
           cx="4"
           cy="4"
           r="2"
@@ -80,14 +80,14 @@ const Linkedin = ({
           animate={controls}
         />
         {/* Dropping "i" part */}
-        <motion.path
+        <Motion.path
           d="M16 8a6 6 0 0 1 6 6v7h-4v-7"
           variants={dropVariants}
           animate={controls}
           custom={0}
         />
         {/* Dropping "n" part */}
-        <motion.path
+        <Motion.path
           d="M18 14a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7"
           variants={dropVariants}
           animate={controls}
