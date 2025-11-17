@@ -13,7 +13,7 @@ export default function Navigation({ theme, scrolled, activeSection, menuOpen, s
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            sham
+            sham 
           </div>
 
           {/* Desktop Menu */}
