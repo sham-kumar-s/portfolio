@@ -5,6 +5,7 @@ import Linkedin from '../icons/Linkedin';
 export default function Home({ theme, scrollToSection }) {
   const isDark = theme === 'dark';
 
+  
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
