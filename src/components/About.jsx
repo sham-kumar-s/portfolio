@@ -2,7 +2,7 @@ import React from 'react';
 import { User } from 'lucide-react';
 
 export default function About({ theme }) {
-  const isDark = theme === 'dark';
+  const isDark = theme === 'dark'; 
 
   return (
     <section id="about" className={`py-20 ${isDark ? 'bg-gray-900' : 'bg-gray-100'}`}>
