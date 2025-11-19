@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer({ theme }) {
   const isDark = theme === 'dark';
-
+ 
   return (
     <footer className={`py-8 border-t ${
       isDark ? 'bg-gray-950 border-gray-800' : 'bg-gray-50 border-gray-200'
